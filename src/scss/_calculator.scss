@@ -41,7 +41,7 @@
 
 .screen__output {
   font-size: rem(56px);
-  overflow: scroll;
+  text-overflow: ellipsis;
   max-width: 260px;
   padding: 8px 0;
 }

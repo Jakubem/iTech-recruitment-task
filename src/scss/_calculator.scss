@@ -8,13 +8,47 @@
   margin: 0;
   width: 70px;
   height: 70px;
-  background-color: transparent;
   box-sizing: border-box;
   font-family: $f-family;
   font-size: rem(32px);
+  background-color: transparent;
   font-weight: $f-lighter;
   color: $c-white;
+  &--function {
+    font-size: rem(24px);
+    width: 100%;
+    background-color: $c-red;
+    &:hover,
+    &:focus {
+      background-color: $c-red-hov;
+    }
+    &:active {
+      background-color: $c-red;
+    }
+  }
+
+  &--number {
+    &:hover,
+    &:focus {
+      background-color: $c-pink-hov;
+    }
+    &:active {
+      background-color: $c-pink;
+    }
+  }
+  
+  &--operation {
+    &:hover,
+    &:focus {
+      background-color: $c-peach-hov;
+    }
+    &:active {
+      background-color: $c-peach;
+    }
+  }
 }
+
+
 
 .screen {
   height: 180px;
@@ -56,6 +90,10 @@
   text-align: left;
   display: flex;
   justify-content: flex-start;
+
+  &:hover {
+    background-color: $c-red-hov;
+  }
 }
 
 .buttons__operations {
@@ -70,15 +108,6 @@
 
 .button--operation {
   border-top: 1px solid $c-dark-gray-trans;
-}
-
-.button__save {
-  margin-left: 2rem;
-}
-
-.button__save,
-.button__ac {
-  font-size: rem(24px);
 }
 
 .buttons__number-row {

@@ -6,6 +6,11 @@ $c-red: #ec475c;
 $c-pink: #f6827a;
 $c-peach: #f7ba86;
 
+// hover and focus states
+$c-red-hov: adjust-color($c-red, $lightness: 5%);
+$c-pink-hov: adjust-color($c-pink, $lightness: 5%);
+$c-peach-hov: adjust-color($c-peach, $lightness: 5%);
+
 $c-dark-gray-trans: adjust-color($c-dark-gray, $alpha: -0.6);
 
 $f-family: 'Rubik', sans-serif;

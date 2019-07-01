@@ -1,0 +1,6 @@
+// helper function for using rems in pixel manner
+// @see (pl) https://ranyboskie.pl/posts/domyslne-i-preferowane-rozmiary-tekstu/
+@function rem($px) {
+  $remSize: $px / 16px;
+  @return #{$remSize}rem;
+}

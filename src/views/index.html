@@ -8,15 +8,57 @@
   <meta name="description" content="Calculator app">
   <meta name="author" content="Jakub Maksimowicz">
   <meta name="theme-color" content="#614DFF">
-  <link href="https://fonts.googleapis.com/css?family=DM+Sans&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Rubik:300,400&display=swap" rel="stylesheet">
   <title>Calculator app</title>
 </head>
 
 <body>
   <main class="main">
-    <article class="article">
+    <article class="calculator">
       <h1 class="h1 headline">Calculator app</h1>
-    </article> 
+      <div class="screen">
+        <input class="screen__equation" type="text" value="2+4=" disabled>
+        <output class="screen__output">
+          1,460
+        </output>
+      </div>
+      <div class="buttons">
+        <div class="buttons__left-panel">
+          <div class="buttons__functions">
+            <button class="button button__ac" type="button">AC</button>
+            <button class="button button__save" type="button">SAVE</button>
+          </div>
+          <div class="buttons__numbers">
+            <div class="buttons__number-row">
+              <button class="button" data-value="." type="button">.</button>
+              <button class="button" data-value="0" type="button">0</button>
+            </div>
+            <div class="buttons__number-row">
+              <button class="button" data-value="1" type="button">1</button>
+              <button class="button" data-value="2" type="button">2</button>
+              <button class="button" data-value="3" type="button">3</button>
+            </div>
+            <div class="buttons__number-row">
+              <button class="button" data-value="4" type="button">4</button>
+              <button class="button" data-value="5" type="button">5</button>
+              <button class="button" data-value="6" type="button">6</button>
+            </div>
+            <div class="buttons__number-row">
+              <button class="button" data-value="7" type="button">7</button>
+              <button class="button" data-value="8" type="button">8</button>
+              <button class="button" data-value="9" type="button">9</button>
+            </div>
+          </div>
+        </div>
+        <div class="buttons__operations">
+          <button class="button button--operation" data-operation="divide" type="button">&divide;</button>
+          <button class="button button--operation" data-operation="multiply" type="button">x</button>
+          <button class="button button--operation" data-operation="subtract" type="button">-</button>
+          <button class="button button--operation" data-operation="add" type="button">+</button>
+          <button class="button button--operation" data-operation="equals" type="button">=</button>
+        </div>
+      </div>
+    </article>
   </main>
 
 </body>

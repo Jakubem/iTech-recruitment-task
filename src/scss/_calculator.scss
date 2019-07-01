@@ -1,0 +1,88 @@
+.calculator {
+  display: flex;
+  flex-direction: column;
+}
+
+.button {
+  border: 0;
+  margin: 0;
+  width: 70px;
+  height: 70px;
+  background-color: transparent;
+  box-sizing: border-box;
+  font-family: $f-family;
+  font-size: rem(32px);
+  font-weight: $f-lighter;
+  color: $c-white;
+}
+
+.screen {
+  height: 180px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  background-color: $c-dark-gray;
+  color: $c-white;
+  font-family: $f-family;
+  padding-right: 2rem;
+}
+
+.screen__equation {
+  border: 0;
+  background-color: transparent;
+  color: $c-light-gray;
+  max-width: 240px;
+  text-align: right;
+  letter-spacing: 2px;
+  font-size: rem(28px);
+  font-weight: $f-lighter;
+}
+
+.screen__output {
+  font-size: rem(56px);
+  overflow: scroll;
+  max-width: 260px;
+  padding: 8px 0;
+}
+
+.buttons {
+  display: flex;
+  background-color: $c-pink;
+}
+
+.buttons__functions {
+  background-color: $c-red;
+  text-align: left;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.buttons__operations {
+  background-color: $c-peach;
+  display: flex;
+  flex-direction: column;
+}
+
+.button--operation:first-child {
+  border-top: 0;
+}
+
+.button--operation {
+  border-top: 1px solid $c-dark-gray-trans;
+}
+
+.button__save {
+  margin-left: 2rem;
+}
+
+.button__save,
+.button__ac {
+  font-size: rem(24px);
+}
+
+.buttons__number-row {
+  border-top: 1px solid $c-dark-gray-trans;
+  height: 70px;
+  box-sizing: border-box;
+}

@@ -1,4 +1,3 @@
-
 // colors for calculator UI
 $c-white: #fff;
 $c-dark-gray: #29363b;
@@ -7,8 +6,10 @@ $c-red: #ec475c;
 $c-pink: #f6827a;
 $c-peach: #f7ba86;
 
-$f-family: 'DM Sans', sans-serif;
+$c-dark-gray-trans: adjust-color($c-dark-gray, $alpha: -0.6);
 
+$f-family: 'Rubik', sans-serif;
+
+$f-light: 300;
+$f-lighter: 200;
 $f-regular: 400;
-$f-medium: 500;
-$f-bold: 700;

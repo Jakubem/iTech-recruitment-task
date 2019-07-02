@@ -101,6 +101,7 @@ const inputOperator = (e) => {
   } else {
     if (currentVal.match(operationsRegex)) {
       calculate();
+      calculateNext(operation, displayOperation);
       return;
     } else {
       currentOperation = operation;
@@ -109,6 +110,18 @@ const inputOperator = (e) => {
   }
 
 }
+
+/**
+ * calculate next equation when operation was pressed
+ * @param {str} displayOp - operation to be added to equation
+ * @param {str} op - operation to be performed
+ */
+const calculateNext = (op, displayOp) => {
+  const currentVal = output.innerHTML;
+  equation.value = currentVal + displayOp;
+  currentOperation = op;
+}
+
 
 const inputNumber = (key) => {
   equation.value += key;

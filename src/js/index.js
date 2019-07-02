@@ -1,6 +1,7 @@
 const parseOutput = require('./utils.js').parseOutput;
 const getResult = require('./utils.js').getResult;
 const equationIsValid = require('./utils.js').equationIsValid;
+const triggerToast = require('./utils.js').triggerToast;
 
 const acBtn = document.querySelector('.button__ac');
 const saveBtn = document.querySelector('.button__save');
@@ -33,6 +34,7 @@ const saveToCsv = () => {
         'Content-Type': 'application/json'
       }
     })
+    triggerToast();
     dataSend = true;
   }
 }

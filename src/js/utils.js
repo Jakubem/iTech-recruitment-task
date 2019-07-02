@@ -47,8 +47,26 @@ const equationIsValid = (eq, regex) => {
   return arr.length === 2 && !arr.includes('');
 }
 
+// create tag for toast message
+const toastMsg = (msg) => {
+  const tag = document.createElement('p');
+  tag.classList.add('toast-msg');
+  tag.innerHTML = msg;
+  return tag;
+}
+
+// create custom toast message to let user know that result was submitted to the server
+const triggerToast = () => {
+  const toastContainer = document.querySelector('.toast');
+  toastContainer.appendChild(toastMsg('Result saved!'));
+  setTimeout(() => {
+    toastContainer.innerHTML = "";
+  }, 3000);
+}
+
 module.exports = {
   parseOutput,
   getResult,
-  equationIsValid
+  equationIsValid,
+  triggerToast
 }

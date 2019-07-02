@@ -1,0 +1,25 @@
+.toast {
+  position: fixed;
+  top: 0;
+  left: 30px;
+}
+.toast-msg {
+  background-color: $c-green;
+  width: 150px;
+  color: $c-dark-gray;
+  border-radius: 5px;
+  padding: 15px;
+  text-align: center;
+  animation: toast 0.1s ease-in-out;
+}
+@keyframes toast {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

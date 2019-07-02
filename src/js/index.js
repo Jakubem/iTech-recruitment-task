@@ -88,12 +88,16 @@ const inputOperator = (e) => {
   const currentVal = equation.value;
   const displayOperation = e.target.innerHTML;
   const operation = e.target.dataset.operation;
+  const eqValid = equationIsValid(currentVal, operationsRegex);
 
-  if (operation === 'equals' && equationIsValid(currentVal, operationsRegex)) {
-    calculate();
-    equation.value += '=';
-    calculatedFinish = true;
-    return;
+  if (operation === 'equals') {
+    if (eqValid) {
+      calculate();
+      equation.value += '=';
+      calculatedFinish = true;
+    } else {
+      return;
+    }
   } else {
     if (currentVal.match(operationsRegex)) {
       calculate();

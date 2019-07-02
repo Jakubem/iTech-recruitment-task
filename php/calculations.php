@@ -4,7 +4,7 @@ include "meta.php";
 echo "<body><main>\n";
 include "nav.php";
 echo "<h1>Calculation results</h1>";
-echo '<table><thead><tr><td>Browser</td><td>Result</td><td>IP</td></tr></thead>';
+echo '<table><thead><tr><td>Browser</td><td>Date</td><td>Result</td><td>IP</td></tr></thead>';
 
 $f = fopen("calculations.csv", "r");
 

@@ -14,6 +14,7 @@ function get_browser_name($user_agent) {
 
 $UA = get_browser_name($_SERVER['HTTP_USER_AGENT']);
 $IP = $_SERVER['REMOTE_ADDR'];
+$date = date('jS F Y h:i:s A');
 
 // get result via post
 $contentType = isset($_SERVER["CONTENT_TYPE"]) ? trim($_SERVER["CONTENT_TYPE"]) : '';
@@ -23,7 +24,7 @@ if ($contentType === "application/json") {
 }
 
 $file = fopen("calculations.csv", "a");
-$new_line = array($UA, $result[result], $IP);
+$new_line = array($UA, $date, $result[result], $IP);
 
 fputcsv($file, $new_line);
 fclose($file);

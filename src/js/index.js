@@ -3,6 +3,7 @@ const getResult = require('./utils.js').getResult;
 const equationIsValid = require('./utils.js').equationIsValid;
 
 const acBtn = document.querySelector('.button__ac');
+const saveBtn = document.querySelector('.button__save');
 
 const output = document.querySelector('.screen__output');
 const equation = document.querySelector('.screen__equation');
@@ -13,6 +14,32 @@ const operationsRegex = /\+|\-|\x|\÷/g;
 
 let currentOperation = '';
 let calculatedFinish = false;
+let dataSend = false;
+
+/**
+ * send result to server to save it as csv
+ */
+const saveToCsv = () => {
+  const data = {
+    result: output.value
+  }
+  if (calculatedFinish && dataSend !== true) {
+    fetch('save_csv.php', {
+      method: 'POST',
+      mode: "same-origin",
+      credentials: "same-origin",
+      body: JSON.stringify(data),
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    })
+    dataSend = true;
+  }
+}
+
+saveBtn.addEventListener('click', () => {
+  saveToCsv();
+});
 
 /**
  * reset all previous states
@@ -22,6 +49,7 @@ const resetState = () => {
   equation.value = '';
   output.innerHTML = '0';
   calculatedFinish = false;
+  dataSend = false;
 }
 
 resetState();

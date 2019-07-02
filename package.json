@@ -20,7 +20,8 @@
   },
   "scripts": {
     "build": "webpack -p --config webpack/webpack.front.js",
-    "dev": "webpack-dev-server -d --watch --config webpack/webpack.front.js"
+    "dev": "webpack-dev-server -d --watch --config webpack/webpack.front.js",
+    "php": "php -S localhost:8081 -t dist/"
   },
   "author": "Jakub Maksimowicz",
   "license": "MIT"

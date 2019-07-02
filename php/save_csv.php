@@ -14,7 +14,7 @@ function get_browser_name($user_agent) {
 
 $UA = get_browser_name($_SERVER['HTTP_USER_AGENT']);
 $IP = $_SERVER['REMOTE_ADDR'];
-$date = date('jS F Y h:i:s A');
+$date = date('jS F Y h:i A');
 
 // get result via post
 $contentType = isset($_SERVER["CONTENT_TYPE"]) ? trim($_SERVER["CONTENT_TYPE"]) : '';

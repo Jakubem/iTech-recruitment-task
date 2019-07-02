@@ -1,7 +1,9 @@
-const parseOutput = require('./utils.js').parseOutput;
-const getResult = require('./utils.js').getResult;
-const equationIsValid = require('./utils.js').equationIsValid;
-const triggerToast = require('./utils.js').triggerToast;
+const {
+  parseOutput,
+  getResult,
+  equationIsValid,
+  triggerToast
+} = require('./utils.js');
 
 const acBtn = document.querySelector('.button__ac');
 const saveBtn = document.querySelector('.button__save');
@@ -95,21 +97,22 @@ const inputOperator = (e) => {
       calculate();
       equation.value += '=';
       calculatedFinish = true;
-    } else {
-      return;
     }
-  } else {
-    if (currentVal.match(operationsRegex)) {
-      calculate();
-      calculateNext(operation, displayOperation);
-      return;
-    } else {
-      currentOperation = operation;
-      equation.value += displayOperation;
-    }
+    return;
   }
 
+  if (currentVal.match(operationsRegex) && eqValid) {
+    calculate();
+    calculateNext(operation, displayOperation);
+    return;
+  } else if (currentVal.match(operationsRegex)) {
+    return;
+  } else {
+    currentOperation = operation;
+    equation.value += displayOperation;
+  }
 }
+
 
 /**
  * calculate next equation when operation was pressed
@@ -122,8 +125,10 @@ const calculateNext = (op, displayOp) => {
   currentOperation = op;
 }
 
-
 const inputNumber = (key) => {
+  if (equation.value === '0' && equation.value === key) {
+    return;
+  }
   equation.value += key;
 }
 

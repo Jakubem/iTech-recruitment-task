@@ -72,10 +72,6 @@ module.exports = {
       collapseWhitespace: true,
       template: './src/views/index.html',
       filename: './index.html'
-    }),
-    new CopyWebpackPlugin([{
-      from: './src/assets',
-      to: './'
-    }])
+    })
   ]
 }

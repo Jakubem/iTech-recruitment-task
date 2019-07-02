@@ -14,37 +14,47 @@
   background-color: transparent;
   font-weight: $f-lighter;
   color: $c-white;
+
   &--function {
     font-size: rem(24px);
     width: 100%;
     background-color: $c-red;
+
     &:hover,
     &:focus {
       background-color: $c-red-hov;
     }
+
     &:active {
       background-color: $c-red;
     }
   }
 
   &--number {
+
     &:hover,
     &:focus {
       background-color: $c-pink-hov;
     }
+
     &:active {
       background-color: $c-pink;
     }
   }
-  
+
   &--operation {
+    border-top: 1px solid $c-dark-gray-trans;
     &:hover,
     &:focus {
       background-color: $c-peach-hov;
     }
+
     &:active {
       background-color: $c-peach;
     }
+  }
+  &--operation:first-child {
+    border-top: 0;
   }
 }
 
@@ -59,59 +69,49 @@
   background-color: $c-dark-gray;
   color: $c-white;
   font-family: $f-family;
-  padding-right: 2rem;
-}
-
-.screen__equation {
-  border: 0;
-  background-color: transparent;
-  color: $c-light-gray;
-  max-width: 240px;
-  text-align: right;
-  letter-spacing: 2px;
-  font-size: rem(28px);
-  font-weight: $f-lighter;
-}
-
-.screen__output {
-  font-size: rem(56px);
   text-overflow: ellipsis;
-  max-width: 260px;
-  padding: 8px 0;
+  padding-right: 1.5rem;
+  &__equation {
+    border: 0;
+    background-color: transparent;
+    color: $c-light-gray;
+    max-width: 240px;
+    text-align: right;
+    letter-spacing: 2px;
+    font-size: rem(28px);
+    font-weight: $f-lighter;
+  }
+  
+  &__output {
+    font-size: rem(56px);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 260px;
+    padding: 8px 0;
+  }
 }
 
 .buttons {
   display: flex;
   background-color: $c-pink;
-}
-
-.buttons__functions {
-  background-color: $c-red;
-  text-align: left;
-  display: flex;
-  justify-content: flex-start;
-
-  &:hover {
-    background-color: $c-red-hov;
+  &__functions {
+    background-color: $c-red;
+    text-align: left;
+    display: flex;
+    justify-content: flex-start;
+  
+    &:hover {
+      background-color: $c-red-hov;
+    }
   }
-}
-
-.buttons__operations {
-  background-color: $c-peach;
-  display: flex;
-  flex-direction: column;
-}
-
-.button--operation:first-child {
-  border-top: 0;
-}
-
-.button--operation {
-  border-top: 1px solid $c-dark-gray-trans;
-}
-
-.buttons__number-row {
-  border-top: 1px solid $c-dark-gray-trans;
-  height: 70px;
-  box-sizing: border-box;
+  &__operations {
+    background-color: $c-peach;
+    display: flex;
+    flex-direction: column;
+  }
+  &__number-row {
+    border-top: 1px solid $c-dark-gray-trans;
+    height: 70px;
+    box-sizing: border-box;
+  }
 }

@@ -1,6 +1,6 @@
 /**
  * convert string output to a and b values
- * @param {str} eq - equation to be converted to array
+ * @param {string} eq - equation to be converted to array
  * @param {regex} regex - chars for equation to be split on
  */
 const parseOutput = (eq, regex) => {
@@ -8,7 +8,7 @@ const parseOutput = (eq, regex) => {
   return vals;
 }
 
-/**
+/** TODO: do isInteger once
  * return result of given equation
  * @param {number} a - first character of the operation
  * @param {number} b - second character of the operation
@@ -39,7 +39,7 @@ const getResult = (a, b, operation) => {
 
 /**
  * check if the equation has 2 arguments
- * @param {str} eq - equation to be passed
+ * @param {string} eq - equation to be passed
  * @param {regex} regex - chars for equation to be split on
  */
 const equationIsValid = (eq, regex) => {

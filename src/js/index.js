@@ -116,8 +116,8 @@ const inputOperator = (e) => {
 
 /**
  * calculate next equation when operation was pressed
- * @param {str} displayOp - operation to be added to equation
- * @param {str} op - operation to be performed
+ * @param {string} displayOp - operation to be added to equation
+ * @param {string} op - operation to be performed
  */
 const calculateNext = (op, displayOp) => {
   const currentVal = output.innerHTML;

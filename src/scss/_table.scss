@@ -27,3 +27,9 @@ td {
 tfoot th {
   text-align: right
 }
+
+@media (max-width: 500px) {
+  table {
+    font-size: rem(16px);
+  }
+}

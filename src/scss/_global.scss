@@ -14,11 +14,14 @@ body {
   align-items: center;
   flex-direction: column;
   box-sizing: border-box;
-  height: 100%;
 }
 
 .footer {
   margin-top: 20px;
+}
+
+.link {
+  color: $c-dark-gray;
 }
 
 .headline {

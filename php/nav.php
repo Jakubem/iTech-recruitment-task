@@ -1,3 +1,3 @@
 <nav>
-  <a href="./">← calculator</a>
+  <a class="link" href="./">← calculator</a>
 </nav>

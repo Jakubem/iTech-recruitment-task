@@ -1,6 +1,8 @@
 .calculator {
   display: flex;
   flex-direction: column;
+  padding-top: 30px;
+
 }
 
 .button {
@@ -113,5 +115,25 @@
     border-top: 1px solid $c-dark-gray-trans;
     height: 70px;
     box-sizing: border-box;
+  }
+}
+
+@media (max-width: 500px) {
+  .button {
+    width: 50px;
+    height: 50px;
+    &--function {
+      width: 100%;
+      font-size: rem(18px);
+    }
+  }
+  .buttons__number-row {
+    height: 50px;
+  }
+  .screen__output {
+    font-size: rem(45px);
+  }
+  .screen__equation {
+    max-width: 180px;
   }
 }

@@ -1,10 +1,12 @@
-## Calculator app
+<h2 align="center">Calculator app<h2>
 
-This is a tiny little calculator written in Vanilla JS and PHP.
+<p align="center">This is a tiny little calculator written in Vanilla JS and PHP.</p>
 
-![calculator app](./demo/demo.png)
+<p align="center">
+  <img alt="calculator app" src="./demo/demo.png">
+</p>
 
-[**Live demo**]()
+[**Live demo**]() <br>
 [**Calculations page**]()
 
 ### Features:

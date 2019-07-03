@@ -6,7 +6,7 @@
   <img alt="calculator app" src="./demo/demo.png">
 </p>
 
-[**✈️ Live demo**]() <br>
+[**✈️ Live demo**]() <br><br>
 [**📊 Calculations page**]()
 
 ### Features:
@@ -22,8 +22,8 @@
 
 ### Folder structure:
 - `src` - all source files <br>
-- `src/css` - scss styles <br>
-- `src/css/style.scss` - SCSS entry point <br>
+- `src/scss` - scss styles <br>
+- `src/scss/style.scss` - SCSS entry point <br>
 - `src/js` - all JavaScript files <br>
 - `src/js/main.js` - JS entry point <br>
 - `src/views` - template for html-webpack-plugin <br>

@@ -11,7 +11,7 @@ $f = fopen("calculations.csv", "r");
 while (($line = fgetcsv($f))) {
     echo "<tr>";
     foreach ($line as $cell) {
-      echo "<td>" . htmlspecialchars($cell) . "</td>";
+        echo "<td>" . htmlspecialchars($cell) . "</td>";
     }
     echo "</tr>\n";
 }

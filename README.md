@@ -32,9 +32,9 @@
 - `webpack` - whole webpack config
 
 ### Additional notes:
-- However it was not mentioned in original design, additional navigation and header was added for better usability
+- However it was not mentioned in the original design, additional navigation and header was added for better usability
 - It would be nice if large results would scroll, however `overflow: scroll` was adding nasty scrollbars on windows
-- As this page is collecting user's IP address, some kind of cookie banner should be implemented
+- As this page is collecting user's IP address, some kind of disclaimer should be implemented
 - Also, user should have a possibility to remove his personal data from the server
 - Results table is not filtered by newest to oldest for now
 - A Service Worker and offline functionality could be a nice addition to the calculator page

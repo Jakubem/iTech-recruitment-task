@@ -6,8 +6,8 @@
   <img alt="calculator app" src="./demo/demo.png">
 </p>
 
-[**Live demo**]() <br>
-[**Calculations page**]()
+[**✈️ Live demo**]() <br>
+[**📊 Calculations page**]()
 
 ### Features:
 - Performing calculations

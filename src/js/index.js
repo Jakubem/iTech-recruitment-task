@@ -3,7 +3,7 @@ const {
   getResult,
   equationIsValid,
   triggerToast
-} = require('./utils.js');
+} = require('./utils.js'); // 😎
 
 const acBtn = document.querySelector('.button__ac');
 const saveBtn = document.querySelector('.button__save');
@@ -13,8 +13,10 @@ const equation = document.querySelector('.screen__equation');
 const numbers = document.querySelector('.buttons__numbers');
 const operations = document.querySelector('.buttons__operations');
 
+// all possible operations
 const operationsRegex = /\+|\-|\x|\÷/g;
 
+// current state
 let currentOperation = '';
 let calculatedFinish = false;
 let dataSend = false;
@@ -26,6 +28,7 @@ const saveToCsv = () => {
   const data = {
     result: output.value
   }
+  // check if result is ready, and data was not send yet
   if (calculatedFinish && dataSend !== true) {
     fetch('save_csv.php', {
       method: 'POST',
@@ -36,6 +39,7 @@ const saveToCsv = () => {
         'Content-Type': 'application/json'
       }
     })
+    // trigger toast message to let user know when data was send
     triggerToast();
     dataSend = true;
   }
@@ -102,6 +106,7 @@ const inputOperator = (e) => {
   }
 
   if (currentVal.match(operationsRegex) && eqValid) {
+    // when operation is pressed before equals, replace result with first equation argument
     calculate();
     calculateNext(operation, displayOperation);
     return;
@@ -115,7 +120,7 @@ const inputOperator = (e) => {
 
 
 /**
- * calculate next equation when operation was pressed
+ * calculate next equation when operation was pressed before '='
  * @param {string} displayOp - operation to be added to equation
  * @param {string} op - operation to be performed
  */
@@ -134,6 +139,7 @@ const inputNumber = (key) => {
 
 const inputDecimal = (key) => {
   const currentVal = equation.value;
+  // prevent input of more than 1 dot
   if (!currentVal.includes('.') && currentVal !== '') {
     equation.value = currentVal + key;
   }
@@ -142,6 +148,7 @@ const inputDecimal = (key) => {
 const calculate = () => {
   const currentEquation = equation.value;
   if (equationIsValid(currentEquation, operationsRegex)) {
+    // parseOutput will return array with 2 items, so we can destructure it 😎
     const [a, b] = parseOutput(currentEquation, operationsRegex);
     output.innerHTML = getResult(Number(a), Number(b), currentOperation);
   }

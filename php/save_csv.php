@@ -16,7 +16,7 @@ $UA = get_browser_name($_SERVER['HTTP_USER_AGENT']);
 $IP = $_SERVER['REMOTE_ADDR'];
 $date = date('jS F Y h:i A');
 
-// get result via post
+// get result via post (from: https://codepen.io/dericksozo/post/fetch-api-json-php)
 $contentType = isset($_SERVER["CONTENT_TYPE"]) ? trim($_SERVER["CONTENT_TYPE"]) : '';
 if ($contentType === "application/json") {
     $content = trim(file_get_contents("php://input"));
@@ -24,7 +24,10 @@ if ($contentType === "application/json") {
 }
 
 $file = fopen("calculations.csv", "a");
+
+// save data as array
 $new_line = array($UA, $date, $result[result], $IP);
 
+// insert array to csv as new line
 fputcsv($file, $new_line);
 fclose($file);
